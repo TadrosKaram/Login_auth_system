@@ -3,7 +3,7 @@
 require_once "datacon.php";
 
 
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'student') {
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'doctor') {
     // Not logged in or not a doctor
     header("Location: login.php");
     exit;

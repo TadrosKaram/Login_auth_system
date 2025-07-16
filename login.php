@@ -20,13 +20,14 @@ if (isset($_POST['login'])) {
   $doctorResult = mysqli_query($conn, $doctorQuery);
 
   if (mysqli_num_rows($doctorResult) == 1) {
+    $_SESSION["type"] = '1';
 $query = "SELECT * FROM doctor WHERE username = '$username' AND type = 2 LIMIT 1";
 $result = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($result) === 1) {
     $_SESSION['type'] = '2';
 }
-$_SESSION["type"] = '1';
+
     $_SESSION['username'] = $username;
     $_SESSION['role'] = 'doctor';
     header("Location: doctorshome.php");
