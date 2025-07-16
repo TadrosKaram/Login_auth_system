@@ -83,7 +83,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'doctor') {
     </style>
   </head>
   <body>
-    <a href="index.php" id="logoutbtn">Logout</a>
+    <a href="logout.php" id="logoutbtn">Logout</a>
 
     <h1>Welcome Doctor</h1>
 

@@ -2,7 +2,6 @@
 
 require_once "datacon.php";
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'student') {
-    // Not logged in or not a doctor
     header("Location: login.php");
     exit;
 }
@@ -65,7 +64,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'student') {
   </head>
   <body>
     <div class="d-flex">
-      <a href="index.php" class="btn btn-outline-danger me-2" id="logoutbtn">
+      <a href="logout.php" class="btn btn-outline-danger me-2" id="logoutbtn">
         Logout
       </a>
     </div>
